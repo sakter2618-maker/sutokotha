@@ -17,7 +17,7 @@ says on every page that it is a demo, and checkout is turned off.
 Building needs only Node.js 18 or newer. There are no dependencies to install.
 
 ```bash
-SITE_URL=https://<user>.github.io/sutokotha node src/build.js
+SITE_URL=https://sakter2618-maker.github.io/sutokotha node src/build.js
 # output is in dist/
 cd dist && python3 -m http.server 8080   # preview at http://localhost:8080
 ```
