@@ -25,7 +25,7 @@
    "name": "Cushion covers",
    "art": "cushion",
    "intro": "Smaller kantha panels, finished with a hidden zip. Sized for standard 18 and 20 inch inserts.",
-   "metaDescription": ""
+   "metaDescription": "Smaller kantha panels, finished with a hidden zip. Sized for standard 18 and 20 inch inserts."
   },
   {
    "slug": "table-linen",
@@ -119,12 +119,12 @@
    "size": "60 × 80 in",
    "care": "Cold machine wash, line dry",
    "description": "Our largest throw, sized for a queen bed. Akash means sky: pale blue running stitch over deep indigo, worked by two stitchers sitting on either side of the cloth.",
-   "metaDescription": ""
+   "metaDescription": "Our largest throw, sized for a queen bed. 60 × 80 in."
   },
   {
    "sku": "KT-005",
    "slug": "nodi-kantha-throw-small",
-   "name": "Nodi kantha throw",
+   "name": "Nodi kantha throw, 40 × 55 in",
    "bn": "নদী",
    "category": "kantha-throws",
    "price": 118,
@@ -216,7 +216,7 @@
    "size": "26 × 76 in",
    "care": "Dry clean or hand wash cold",
    "description": "Panna is emerald. A cotton and silk blend gives this green scarf a slight shine, with white diamond motifs woven along its length.",
-   "metaDescription": ""
+   "metaDescription": "Panna is emerald. A cotton and silk blend gives this green scarf a slight shine, with white diamond motifs woven along its length. 26 × 76 in."
   },
   {
    "sku": "JS-004",
@@ -293,7 +293,7 @@
    "size": "18 × 18 in",
    "care": "Cold machine wash",
    "description": "River rows in indigo and green. Pairs with the Nodi throw.",
-   "metaDescription": ""
+   "metaDescription": "River rows in indigo and green. Pairs with the Nodi throw. 18 × 18 in."
   },
   {
    "sku": "CC-003",
@@ -486,7 +486,7 @@
    "size": "14 × 15 in, 10 in handles",
    "care": "Spot clean",
    "description": "The firefly pattern on a tote with a zip top, for a laptop or library books.",
-   "metaDescription": ""
+   "metaDescription": "The firefly pattern on a tote with a zip top, for a laptop or library books. 14 × 15 in, 10 in handles."
   },
   {
    "sku": "TB-004",
@@ -525,8 +525,8 @@
    "slug": "caring-for-hand-stitched-cotton",
    "title": "Caring for hand-stitched cotton",
    "date": "2026-10-02",
-   "noH1": true,
-   "metaDescription": "",
+   "noH1": false,
+   "metaDescription": "Kantha is tougher than it looks. Cold water, a gentle cycle and a line to dry on are all it needs. Skip the dryer.",
    "body": [
     "Kantha is tougher than it looks. Cold water, a gentle cycle and a line to dry on are all it needs.",
     "Skip the dryer. Heat can tighten the cotton unevenly and pucker the stitches.",

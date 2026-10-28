@@ -71,9 +71,16 @@ for (const f of findings) {
         if (j && j.noH1) { j.noH1 = false; note(f, `Journal \`${j.slug}\`: make the title a real \`<h1>\``); }
       }
       break;
-    case 'SITEMAP_NOT_DECLARED':
-      if (settings.robotsWithoutSitemapLine) { settings.robotsWithoutSitemapLine = false; note(f, 'robots.txt: add the `Sitemap:` line'); }
+    case 'SITEMAP_NOT_DECLARED': {
+      // Search engines only read robots.txt at the domain root. If the site lives in a subfolder
+      // (a GitHub Pages project site), our own robots.txt is not the one being checked.
+      const basePath = new URL(process.env.SITE_URL || 'https://sakter2618-maker.github.io/sutokotha').pathname.replace(/\/$/, '');
+      const rootRobots = urlsOf(f).some(u => /^https?:\/\/[^\/]+\/robots\.txt$/i.test(u));
+      if (basePath && rootRobots) {
+        skipped.push({ findingId: f.findingId, reason: 'The robots.txt that search engines read is at the domain root, outside this repository. Submit the sitemap in Google Search Console instead.' });
+      } else if (settings.robotsWithoutSitemapLine) { settings.robotsWithoutSitemapLine = false; note(f, 'robots.txt: add the `Sitemap:` line'); }
       break;
+    }
     default:
       skipped.push({ findingId: f.findingId, reason: 'No automatic fix. Needs a person to decide (content, design or server change).' });
   }
