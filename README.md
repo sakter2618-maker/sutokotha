@@ -30,4 +30,19 @@ cd dist && python3 -m http.server 8080   # preview at http://localhost:8080
 | `src/build.js` | Static site generator |
 | `src/art.js` | Draws each product image from its thread colours |
 | `src/styles.css` | All styles |
+| `data/seo-settings.json` | Switches for the seeded SEO issues |
+| `tools/propose-fixes.js` | Turns the agent's findings into data changes and a pull-request description |
 | `docs/DESIGN.md` | Design tokens and decisions |
+
+## How fixes reach the live site
+
+1. The SEO Growth Agent audits the live site and records findings.
+2. `node tools/propose-fixes.js findings.json pr-body.md` edits only `data/catalog.json`
+   and `data/seo-settings.json`, and writes a pull-request description that links every
+   change to the finding and evidence behind it.
+3. The changes are opened as a pull request. **A person reviews and merges it**. Only
+   then does the GitHub Actions workflow rebuild and publish the site.
+
+Local dry run (2026-10-28): health score 91 → 99, with all 6 seeded issues fixed. The 3
+remaining findings (no H2s, thin journal index, short title) need editorial decisions,
+so the tool lists them for review instead of changing them.
