@@ -34,3 +34,24 @@ merged it. GitHub Actions then rebuilt the site.
 | Thin content / short title on `/journal/` | Editorial: needs new writing |
 | No robots.txt, sitemap not declared | Search engines read robots.txt only at `sakter2618-maker.github.io/`, outside this repo. The fix is to submit the sitemap in Search Console |
 | PageSpeed not measured | No API key configured yet. The agent records `RATE_LIMITED` instead of guessing a score |
+
+## Second cycle: speed (PageSpeed Insights, Lighthouse 13.5)
+
+Agent run_49 measured the home page and listed one opportunity: **render-blocking
+requests** (the Google Fonts stylesheet). [Pull request #2](https://github.com/sakter2618-maker/sutokotha/pull/2)
+made the font stylesheet non-blocking. It was reviewed, merged and re-measured in run_50.
+
+| | Before (run_49) | After (run_50) |
+|---|---|---|
+| Mobile score | 92 | 92 |
+| Desktop score | 99 | 99 |
+| Mobile FCP / LCP (lab) | 2.7 s / 2.7 s | 2.7 s / 2.7 s |
+| Desktop FCP / LCP (lab) | 683 ms / 683 ms | 712 ms / 712 ms |
+| Opportunities listed | Render-blocking requests (~2.1 s mobile, ~500 ms desktop) | **None** |
+
+**What this shows:** the flagged problem is gone. Lighthouse no longer lists any
+opportunity, but the scores did not move. The estimated "~2.1 s" saving was an upper
+bound. The remaining time is mostly network and server response on GitHub Pages under
+Lighthouse's simulated mobile connection, which page code can't fix. Lab numbers also vary
+a little between runs (desktop 683 → 712 ms is within normal noise). The site has too
+little traffic for Google's real-user (field) data, so only lab data is available.
