@@ -33,7 +33,7 @@ merged it. GitHub Actions then rebuilt the site.
 | No H2 subheadings (3 pages) | Editorial: needs someone to decide the page structure |
 | Thin content / short title on `/journal/` | Editorial: needs new writing |
 | No robots.txt, sitemap not declared | Search engines read robots.txt only at `sakter2618-maker.github.io/`, outside this repo. The fix is to submit the sitemap in Search Console |
-| PageSpeed not measured | No API key configured yet. The agent records `RATE_LIMITED` instead of guessing a score |
+| PageSpeed not measured (in run_47/48) | No API key at the time, so the agent recorded `RATE_LIMITED` instead of guessing. Fixed from run_49 onward: see below |
 
 ## Second cycle: speed (PageSpeed Insights, Lighthouse 13.5)
 
