@@ -14,13 +14,10 @@ const BASE = new URL(SITE_URL).pathname.replace(/\/$/, '');
 const { site, categories, products, journal } = data;
 const catBySlug = Object.fromEntries(categories.map(c => [c.slug, c]));
 
-// Pages that deliberately ship with SEO problems, so the agent has real issues to find.
-// The full list and the expected findings are in docs/SEEDED_ISSUES.md.
-const SEED = {
-  imageWithoutAlt: ['mati-kantha-throw', 'tara-jamdani-scarf', 'mini-kantha-pouch'],
-  categoryPagesWithoutCanonical: true,
-  robotsWithoutSitemapLine: true
-};
+// SEO settings live in data/seo-settings.json so that fixes are plain data changes that a
+// person can review in a pull request. The starting values reproduce the seeded issues listed
+// in docs/SEEDED_ISSUES.md.
+const SEED = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/seo-settings.json'), 'utf8'));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const url = p => BASE + p;
