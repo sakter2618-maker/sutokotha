@@ -12,6 +12,14 @@ says on every page that it is a demo, and checkout is turned off.
 - Some SEO issues were left in on purpose for the agent to find. They are listed in
   [docs/SEEDED_ISSUES.md](docs/SEEDED_ISSUES.md).
 
+## Preview
+
+Live site: https://sakter2618-maker.github.io/sutokotha/
+
+| Home | Product page | Mobile |
+|---|---|---|
+| ![Home page](docs/img/home-desktop.png) | ![Product page](docs/img/product-desktop.png) | ![Mobile home page](docs/img/home-mobile.png) |
+
 ## Build
 
 Building needs only Node.js 18 or newer. There are no dependencies to install.
