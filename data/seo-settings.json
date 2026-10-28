@@ -1,9 +1,5 @@
 {
-  "imageWithoutAlt": [
-    "mati-kantha-throw",
-    "tara-jamdani-scarf",
-    "mini-kantha-pouch"
-  ],
-  "categoryPagesWithoutCanonical": true,
+  "imageWithoutAlt": [],
+  "categoryPagesWithoutCanonical": false,
   "robotsWithoutSitemapLine": true
 }
