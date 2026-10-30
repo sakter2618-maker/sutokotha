@@ -36,6 +36,7 @@ function layout({ title, description, pathName, canonical = true, ogImage, body,
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${pathName === '/' && SEED.googleSiteVerification ? `<meta name="google-site-verification" content="${esc(SEED.googleSiteVerification)}">` : ''}
 <title>${esc(title)}</title>
 ${description ? `<meta name="description" content="${esc(description)}">` : ''}
 ${canonical ? `<link rel="canonical" href="${abs(pathName)}">` : ''}
