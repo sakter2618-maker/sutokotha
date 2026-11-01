@@ -55,3 +55,19 @@ bound. The remaining time is mostly network and server response on GitHub Pages 
 Lighthouse's simulated mobile connection, which page code can't fix. Lab numbers also vary
 a little between runs (desktop 683 → 712 ms is within normal noise). The site has too
 little traffic for Google's real-user (field) data, so only lab data is available.
+
+### Follow-up: scores after Google updated Lighthouse (13.5 → 13.6)
+
+From 2026-10-30 the daily runs show much better mobile numbers, with no change to the site:
+
+| Run (date) | Lighthouse | Mobile score | Mobile LCP (lab) | Desktop score |
+|---|---|---|---|---|
+| run_50 (Oct 28) | 13.5 | 92 | 2.7 s | 99 |
+| run_70 (Oct 30) | 13.6 | 99 | 762 ms | 100 |
+| run_71 (Oct 31) | 13.6 | 99 | n/a | 100 |
+| run_72 (Nov 1) | 13.6 | 100 | 779 ms | 100 |
+
+**What this shows:** the jump came when Google's measuring tool changed, not when the site
+changed (the last site change before it was PR #2 on Oct 28, and run_50 right after PR #2 still
+scored 92). So the improvement can't be credited to PR #2 alone. It most likely reflects how
+Lighthouse 13.6 measures this page. The scores have held for three daily runs.
