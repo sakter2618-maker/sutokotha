@@ -54,3 +54,7 @@ cd dist && python3 -m http.server 8080   # preview at http://localhost:8080
 Local dry run (2026-10-28): health score 91 → 99, with all 6 seeded issues fixed. The 3
 remaining findings (no H2s, thin journal index, short title) need editorial decisions,
 so the tool lists them for review instead of changing them.
+
+## Author
+
+**Salma Akter** · Data Analyst & AI Automation · [salmaakter.me](https://salmaakter.me)
